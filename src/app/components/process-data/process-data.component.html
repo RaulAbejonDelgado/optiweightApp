@@ -1,0 +1,21 @@
+<div align="center">
+<h2>Introduce el archivo csv con los pesos para realizar la optimizacion </h2>
+    <ul>
+      <li class="dropdown-item" href="#"><label for="file">Cargar CSV</label></li>
+          <input type='file' name='userFile' id='file' (change)="constructor($event.target)" style="display: none" multiple>
+    </ul>
+</div>
+<div style="text-align:center;">
+	<table style="border:1px black solid;margin: 0 auto;">
+		<thead>
+			<th>
+				Nombre de producto
+			</th>
+		</thead>
+		<!--Iteramos sobre un array y lo mostramos en un td-->
+		<tbody *ngFor="let item of arrayFilas">
+			<td style="border:1px solid black;">
+				{{ item }}
+			</td>
+		</tbody>
+	</table>
